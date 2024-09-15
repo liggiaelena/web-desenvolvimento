@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3>Calculadora</h3>
+      </div>
+      <div class="card-body">
+        <form #formNome="ngForm" (ngSubmit)="onCalculate(formNome)">
+          <div class="form-group">
+            <label for="n1">Número 1</label>
+            <input type="number" class="form-control" id="n1" name="n1" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="n2">Número 2</label>
+            <input type="number" class="form-control" id="n2" name="n2" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="operation">Operação</label>
+            <select class="form-control" id="operation" name="operation" ngModel required>
+              <option value="add">Soma</option>
+              <option value="sub">Subtração</option>
+              <option value="mult">Multiplicação</option>
+              <option value="div">Divisão</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+        <br>
+        <p>Resultado: {{media}}</p>
+      </div>
+    </div>
+  </div>
